@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    color: beige;
+    background: #968772;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    transition: .2s;
+  }
+  
+  .block {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .title {
+    font-family: Sigmar, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .text-input {
+    height: 20vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Raleway, serif;
+    font-size: 20px;
+    resize: none;
+  }
+  
+  .info {
+    margin: 20px auto;
+  }
+  
+  .keyboard {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    opacity: .6;
+  }
+  
+  .keyboard__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .keyboard__key {
+    height: 50px;
+    width: 60px;
+    margin: 3px;
+    font-size: 18px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s;
+  }
+  
+  .keyboard__key.active {
+    background: rgba(48, 48, 48, 0.2);
+    border-radius: 10px;
+    box-shadow: none;
+    color: aliceblue;
+  }
+  
+  .keyboard__key:active {
+    border-radius: 10px;
+    box-shadow: none;
+  }
+  
+  .keyboard__key:hover {
+    background: rgba(48, 48, 48, 0.2);
+    color: aliceblue;
+  }
+  
+  .keyboard__key_extra-wide,
+  .keyboard__key_wide {
+    width: 126px;
+  }
+  
+  .keyboard__key_ultra-wide {
+    width: 325px;
+  }
