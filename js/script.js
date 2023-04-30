@@ -25,7 +25,7 @@ class Keyboard {
     this.description.innerHTML =
       '( Press Ctrl+Shift to switch layout )';
     this.wind.classList.add('info')
-    this.wind.innerHTML = 'OC: Windous';
+    this.wind.innerHTML = 'OC: Windows';
     this.text.autofocus = true;
     this.text.classList.add('text-input');
     this.text.placeholder
