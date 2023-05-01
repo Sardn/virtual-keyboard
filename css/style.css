@@ -91,6 +91,22 @@ body {
   width: 126px;
 }
 
+.keyboard__key_wide-caps {
+  width: 126px;
+  position: relative;
+}
+
+.keyboard__key_wide-caps::after {
+  content: '';
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
 .keyboard__key_ultra-wide {
   width: 325px;
 }

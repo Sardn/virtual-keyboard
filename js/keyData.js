@@ -176,7 +176,7 @@ const keyData = [
         code: 'CapsLock',
         func: true,
         lang: { en: 'Caps', ru: 'Caps' },
-        width: 'wide',
+        width: 'wide-caps',
       },
       {
         code: 'KeyA',
