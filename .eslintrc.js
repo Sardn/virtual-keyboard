@@ -1,7 +1,7 @@
 module.exports = {
-    "extends": "airbnb-base",
-    "env": { "browser": true },
-    "eslint linebreak-style": ["error", "windows"],
-}
-
-
+  extends: 'airbnb-base',
+  env: { browser: true },
+  rules: {
+    'linebreak-style': ['error', 'windows'],
+  },
+};

@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/extensions
 import { fragment, keyBkeys } from './keyData.js';
 
 class Keyboard {
@@ -11,29 +12,25 @@ class Keyboard {
     this.block = document.createElement('section');
     this.title = document.createElement('h1');
     this.description = document.createElement('p');
-    this.wind = document.createElement('p')
+    this.wind = document.createElement('p');
     this.text = document.createElement('textarea');
     this.keyboard = document.createElement('div');
     const Rowkeyb = document.createElement('div');
-
 
     // Setup elements
     this.block.classList.add('block');
     this.title.classList.add('title');
     this.title.innerHTML = 'Virtual Keyboard';
     this.description.classList.add('info');
-    this.description.innerHTML =
-      '( Press Ctrl+Shift to switch layout )';
-    this.wind.classList.add('info')
+    this.description.innerHTML = '( Press Ctrl+Shift to switch layout )';
+    this.wind.classList.add('info');
     this.wind.innerHTML = 'OC: Windows';
     this.text.autofocus = true;
     this.text.classList.add('text-input');
-    this.text.placeholder
-      = 'Typing here...'
+    this.text.placeholder = 'Typing here...';
 
     this.keyboard.classList.add('keyboard');
     Rowkeyb.classList.add('keyboard__row');
-
 
     // Add to DOM
     this.keyboard.append(fragment);
@@ -41,7 +38,7 @@ class Keyboard {
 
     this.block.append(this.title);
     this.block.append(this.description);
-    this.block.append(this.wind)
+    this.block.append(this.wind);
     this.block.append(this.text);
     this.block.append(this.keyboard);
 
@@ -177,10 +174,8 @@ class Keyboard {
   insertText(chars) {
     const cursorAt = this.text.selectionStart;
 
-    this.text.value =
-      this.text.value.slice(0, cursorAt) +
-      chars +
-      this.text.value.slice(this.text.selectionEnd);
+    this.text.value = this.text.value.slice(0, cursorAt) + chars
+      + this.text.value.slice(this.text.selectionEnd);
 
     this.text.selectionStart = cursorAt + chars.length;
     this.text.selectionEnd = this.text.selectionStart;
@@ -192,9 +187,8 @@ class Keyboard {
     } else {
       const cursorAt = Math.max(0, this.text.selectionStart - 1);
 
-      this.text.value =
-        this.text.value.slice(0, cursorAt) +
-        this.text.value.slice(this.text.selectionEnd);
+      this.text.value = this.text.value.slice(0, cursorAt)
+        + this.text.value.slice(this.text.selectionEnd);
 
       this.text.selectionStart = cursorAt;
       this.text.selectionEnd = this.text.selectionStart;
@@ -207,9 +201,8 @@ class Keyboard {
     } else {
       const cursorAt = this.text.selectionStart;
 
-      this.text.value =
-        this.text.value.slice(0, cursorAt) +
-        this.text.value.slice(cursorAt + 1);
+      this.text.value = this.text.value.slice(0, cursorAt)
+        + this.text.value.slice(cursorAt + 1);
 
       this.text.selectionStart = cursorAt;
       this.text.selectionEnd = this.text.selectionStart;
