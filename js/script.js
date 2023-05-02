@@ -110,7 +110,7 @@ class Keyboard {
     });
 
     document.addEventListener('keyup', (e) => {
-      // e.stopImmediatePropagation();
+      e.stopImmediatePropagation();
 
       const key = document.getElementById(e.code);
       if (!key) {
